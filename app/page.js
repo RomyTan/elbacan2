@@ -15,7 +15,7 @@ export default function ElBacanApp() {
   const videoRef = useRef(null);
   const wrapperSliderRef = useRef(null); 
 
-  const bgImagePath = "/images/hero-bg-angel2e.jpg"; 
+  const bgImagePath = "/images/hero-bg-Havana-01.jpg"; 
   const smokeImagePath = "/images/smoke-effect.png";
   const doorImagePath = "/images/elbacan-door.jpg";
   const logoPath = "/images/elbacan-logo-v2.svg";
