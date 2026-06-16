@@ -3,6 +3,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
 
+// Bikin cetakan data biar TypeScript (TSX) nggak bingung
 interface CigarData {
 name: string;
 ring: string;
@@ -23,6 +24,7 @@ const [activeTab, setActiveTab] = useState('Original');
 const [activeWrapper, setActiveWrapper] = useState(0);
 const [selectedProduct, setSelectedProduct] = useState<CigarData | null>(null);
 
+// INI OBAT ERRORNYA: Kasih tau TS kalau ini buat Video dan Div
 const videoRef = useRef(null);
 const wrapperSliderRef = useRef(null);
 
@@ -86,7 +88,6 @@ setStage('home');
 };
 
 useEffect(() => {
-// Simpan reference ke variabel lokal biar TS Vercel gak komplain error 'null'
 const videoElement = videoRef.current;
 
 if (stage !== 'home' || !videoElement) return;
@@ -389,16 +390,13 @@ El Bacán - Premium Cigars
       .collection-tabs { margin-bottom: 2rem; }
       .tab-btn { padding: 8px 16px; font-size: 14px; }
       
-      /* Ubah Collection jadi Grid 2 Kolom untuk Mobile */
       .collection-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; width: 100%; margin: 0; padding: 0; }
       .product-card { padding: 1rem 0.5rem; min-height: 220px; justify-content: flex-start; }
       .product-img-box { height: 130px; margin-bottom: 1rem; }
       .product-name { font-size: 16px; margin-bottom: 0; min-height: auto; }
       
-      /* Sembunyikan elemen detail di mode Grid Mobile */
       .desktop-specs, .product-brand, .btn-learn-more { display: none; }
       
-      /* Tampilkan nama wrapper khusus di mobile */
       .mobile-wrapper-only { display: block; font-family: 'Arpona', serif; font-size: 12px; color: #89582f; text-align: center; margin-top: 0.5rem; text-transform: uppercase; letter-spacing: 0.05em; }
     }
 
