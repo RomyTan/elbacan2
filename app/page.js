@@ -27,7 +27,7 @@ export default function ElBacanApp() {
     { name: 'TORO', ring: '52', length: '6"', time: '30-45min', intensity: 2, wrapper: 'Habano', image: '/images/eb-std-toro.png', badge: null },
     { name: 'ELEGANTES', ring: '50', length: '7"', time: '40-45min', intensity: 2, wrapper: 'Connecticut', image: '/images/ebpe-elegantes_connecticut.jpg', badge: 'BEST SELLER' },
     { name: 'ELEGANTES', ring: '50', length: '7"', time: '40-45min', intensity: 3, wrapper: 'Habano', image: '/images/ebpe-elegantes_habano.jpg', badge: null },
-    { name: 'ELEGANTES', ring: '50', length: '7"', time: '40-45min', intensity: 4, wrapper: 'Maduro', image: '/images/ebpe-elegantes_Maduro.jpg', badge: null },
+    { name: 'ELEGANTES', ring: '50', length: '7"', time: '40-45min', intensity: 4, wrapper: 'Maduro', image: '/images/ebpe-elegantes_maduro.jpg', badge: null },
     { name: 'CLASICOS', ring: '52', length: '6"', time: '30-40min', intensity: 2, wrapper: 'Connecticut', image: '/images/ebpe-clasicos_connecticut.jpg', badge: null },
     { name: 'CLASICOS', ring: '52', length: '6"', time: '30-40min', intensity: 3, wrapper: 'Habano', image: '/images/ebpe-clasicos_habano.jpg', badge: null },
     { name: 'CLASICOS', ring: '52', length: '6"', time: '30-40min', intensity: 4, wrapper: 'Maduro', image: '/images/ebpe-clasicos_maduro.jpg', badge: 'BEST SELLER' },
