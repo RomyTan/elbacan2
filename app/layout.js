@@ -1,26 +1,29 @@
+import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
-export const viewport = {
-  themeColor: '#000000',
-  width: 'device-width',
-  initialScale: 1,
-  maximumScale: 1,
-  viewportFit: 'cover',
-};
+const geistSans = Geist({
+  variable: "--font-geist-sans",
+  subsets: ["latin"],
+});
+
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
+  subsets: ["latin"],
+});
 
 export const metadata = {
-  title: "El Bacan - Premium Cigars",
-  description: "La tradición se fuma con estilo.",
-  appleWebApp: {
-    capable: true,
-    statusBarStyle: 'black-translucent',
-  },
+  title: "El Bacán - Premium Cigars",
+  description: "La tradición se fuma con estilo. Premium handmade cigars from Nicaragua.",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="bg-black text-white antialiased">{children}</body>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      >
+        {children}
+      </body>
     </html>
   );
 }
