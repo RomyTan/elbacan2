@@ -172,8 +172,7 @@ export default function ElBacanApp() {
 
         .home-container { position: relative; display: flex; flex-direction: column; background-color: #000000; animation: pageFadeIn 0.5s forwards; }
         .hero-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100dvh; background-image: url('${bgImagePath}'); background-size: cover; background-position: center top; z-index: 0; opacity: 0; animation: bgFadeIn 1.5s ease-out 0.2s forwards; }
-        .smoke-wrapper { position: absolute; top: 0; left: 0; width: 100%; height: 100dvh; z-index: 1; opacity: 0; animation: bgFadeIn 1.5s ease-out 0.2s forwards; overflow: hidden; }
-        .smoke-layer { position: absolute; inset: 0; background-image: url('${smokeImagePath}'); background-size: cover; background-position: center top; transform-origin: center top; animation: floatSmoke 8s infinite ease-out; animation-delay: 1.5s; }
+        
         .hero-gradient { position: absolute; top: 0; left: 0; width: 100%; height: 100dvh; background: linear-gradient( to bottom, rgba(0, 0, 0, 0.9) 0%, transparent 25%, transparent 65%, #000000 100% ); z-index: 2; pointer-events: none; }
         
         .content-layer { position: relative; z-index: 10; display: flex; flex-direction: column; min-height: 100dvh; transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.5s ease; }
@@ -201,7 +200,7 @@ export default function ElBacanApp() {
         .btn-secondary { background-color: transparent; color: #e6d5c3; border: 1px solid rgba(181, 128, 69, 0.6); }
         .btn-secondary:hover { background-color: rgba(181, 128, 69, 0.2); }
         .hero-footer { text-align: center; padding: 1rem 0 2rem 0; opacity: 0; animation: contentSlideUp 0.8s ease-out 1.6s forwards; }
-        .hero-footer p { color: #b58045; font-style: italic; letter-spacing: 0.15em; font-size: 14px; margin: 0; }
+        .hero-footer p { color: #b58045; font-style: italic; letter-spacing: 0.15em; font-size: 12px; margin: 0; }
 
         /* --- MOBILE MENU CSS --- */
         .mobile-menu { position: fixed; top: 0; right: 0; width: 100%; height: 100%; z-index: 100; background-color: rgba(0, 0, 0, 0.8); backdrop-filter: blur(8px); display: flex; flex-direction: column; align-items: center; padding: 1.5rem 2rem 2rem; transform: translateX(100%); transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1); }
@@ -226,15 +225,15 @@ export default function ElBacanApp() {
         .menu-copyright { color: #fff; font-size: 12px; margin-top: 0.5rem; }
 
         @media (max-width: 768px) {
-          .hero-bg, .smoke-layer { background-position: 65% top; }
+          .hero-bg, .smoke-layer { background-position: 57% center; background-size: 400% auto; background-repeat: no-repeat; }
           .navbar { padding: 1.5rem; justify-content: flex-start; }
           .nav-links { display: none; }
           .hamburger-menu { display: block; width: 30px; height: auto; cursor: pointer; position: absolute; left: 1.5rem; opacity: 0; animation: navSlideDown 0.8s ease-out 0.5s forwards; z-index: 20;}
           .nav-logo { margin: 0 auto; }
           .nav-logo img { width: 140px !important; height: auto !important; }
-          .hero-title { font-size: 52px; white-space: normal; margin-bottom: 0.2rem; }
+          .hero-title { font-size: 48px; white-space: normal; margin-bottom: 0.2rem; }
           .hero-divider { width: 80%; margin-top: 0.5rem; margin-bottom: 1rem;}
-          .hero-desc { font-size: 15px; }
+          .hero-desc { font-size: 14px; }
           .hero-buttons { flex-direction: row; gap: 15px; width: 100%; justify-content: center; margin-top: -0.75rem; margin-bottom: 0.1rem; }
           .btn { width: 156px; padding: 12px 0; font-size: 16px; margin-bottom: -1rem; }
         }
