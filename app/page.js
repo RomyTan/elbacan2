@@ -15,16 +15,18 @@ export default function ElBacanApp() {
   const videoRef = useRef(null);
   const wrapperSliderRef = useRef(null); 
 
-  const bgImagePath = "/images/Havana-02.jpg"; 
+  const bgImagePath = "/images/Havana-02a.jpg"; 
   const smokeImagePath = "/images/smoke-effect.png";
   const doorImagePath = "/images/elbacan-door.jpg";
   const logoPath = "/images/elbacan-logo-v2.svg";
 
   const collectionData = [
-    { name: 'CHURCHILL', ring: '48', length: '7"', time: '30-45min', intensity: 3, wrapper: 'Habano', image: '/images/eb-std-churchill.png', badge: null },
-    { name: 'DOUBLE CORONA', ring: '52', length: '8"', time: '30-45min', intensity: 4, wrapper: 'Habano', image: '/images/eb-std-double-corona.png', badge: 'BEST SELLER' },
-    { name: 'TORPEDO', ring: '52', length: '6 ½"', time: '40min', intensity: 4, wrapper: 'Habano', image: '/images/eb-std-torpedo.png', badge: null },
-    { name: 'TORO', ring: '52', length: '6"', time: '30-45min', intensity: 2, wrapper: 'Habano', image: '/images/eb-std-toro.png', badge: null },
+    { name: 'CHURCHILL', ring: '48', length: '7"', time: '30-45min', intensity: 3, wrapper: 'Habano', image: '/images/eb-std-churchill.jpg', badge: null },
+    { name: 'DOUBLE CORONA', ring: '52', length: '8"', time: '30-45min', intensity: 4, wrapper: 'Habano', image: '/images/eb-std-double-corona.jpg', badge: 'BEST SELLER' },
+    { name: 'TORPEDO', ring: '52', length: '6 ½"', time: '40min', intensity: 4, wrapper: 'Habano', image: '/images/eb-std-torpedo.jpg', badge: null },
+    { name: 'TORO', ring: '52', length: '6"', time: '30-45min', intensity: 2, wrapper: 'Habano', image: '/images/eb-std-toro.jpg', badge: null },
+    { name: 'ROBUSTO', ring: '50', length: '5"', time: '30-45min', intensity: 2, wrapper: 'Habano', image: '/images/eb-std-robusto.jpg', badge: null },
+    { name: 'FUMAS', ring: '44', length: '6 ⅕"', time: '30-45min', intensity: 2, wrapper: 'Habano', image: '/images/eb-std-fumas.jpg', badge: null },
     { name: 'ELEGANTES', ring: '50', length: '7"', time: '40-45min', intensity: 2, wrapper: 'Connecticut', image: '/images/ebpe-elegantes_connecticut.jpg', badge: 'BEST SELLER' },
     { name: 'ELEGANTES', ring: '50', length: '7"', time: '40-45min', intensity: 3, wrapper: 'Habano', image: '/images/ebpe-elegantes_habano.jpg', badge: null },
     { name: 'ELEGANTES', ring: '50', length: '7"', time: '40-45min', intensity: 4, wrapper: 'Maduro', image: '/images/ebpe-elegantes_maduro.jpg', badge: null },
@@ -124,6 +126,20 @@ export default function ElBacanApp() {
     if (activeTab === 'BEST SELLER') return cigar.badge === 'BEST SELLER';
     return true;
   });
+
+  const scrollToCollection = () => {
+    const section = document.getElementById('collection-section');
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const scrollToDiscover = () => {
+    const section = document.getElementById('showcase-section');
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   return (
     <>
@@ -501,8 +517,8 @@ export default function ElBacanApp() {
                   </p>
                 </div>
                 <div className="hero-buttons">
-                  <button className="btn btn-primary">Collection</button>
-                  <button className="btn btn-secondary">Discover</button>
+                  <button className="btn btn-primary" onClick={scrollToCollection}>Collection</button>
+                  <button className="btn btn-secondary" onClick={scrollToDiscover}>Discover</button>
                 </div>
               </main>
 
@@ -512,7 +528,7 @@ export default function ElBacanApp() {
             </div>
 
             {/* --- SHOWCASE / THE EL BACAN --- */}
-            <section className="showcase-section">
+            <section id="showcase-section" className="showcase-section">
               <div className="showcase-top-gradient"></div>
               
               <div className={`showcase-video-wrapper ${isVideoFinished ? 'fade-out' : ''}`}>
@@ -611,7 +627,7 @@ export default function ElBacanApp() {
             </section>
 
             {/* --- OUR COLLECTION --- */}
-            <section className="collection-section">
+            <section id="collection-section" className="collection-section">
               <h2 className="collection-title">Our Collection</h2>
               <div className="new-section-divider"></div>
               <p className="collection-desc">
