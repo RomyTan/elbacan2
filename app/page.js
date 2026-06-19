@@ -402,13 +402,13 @@ export default function ElBacanApp() {
           .modal-img-box { 
             height: 250px; 
             min-height: 0; 
-            margin-bottom: 1rem; 
+            margin-bottom: 3.5rem; /* Kuncinya di sini, margin ditambah */
           }
           .modal-img { 
-            transform: scale(1.4); /* Angka ini buat ngatur besarnya zoom gambar di HP */
+            transform: scale(1.4); 
           }
         }
-        
+
         @media (max-width: 1024px) {
           .collection-grid { grid-template-columns: repeat(2, 1fr); }
         }
