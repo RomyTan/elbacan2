@@ -392,6 +392,23 @@ export default function ElBacanApp() {
         .modal-img-box { width: 100%; height: 65vh; min-height: 350px; display: flex; justify-content: center; align-items: center; margin-bottom: 2rem; }
         .modal-img { max-width: 100%; max-height: 100%; object-fit: contain; }
 
+        /* --- MOBILE MODAL FIX --- */
+        @media (max-width: 768px) {
+          .modal-content { 
+            padding: 2.5rem 1rem 1.5rem; 
+            max-height: 90vh; 
+            overflow-y: auto; 
+          }
+          .modal-img-box { 
+            height: 250px; 
+            min-height: 0; 
+            margin-bottom: 1rem; 
+          }
+          .modal-img { 
+            transform: scale(1.4); /* Angka ini buat ngatur besarnya zoom gambar di HP */
+          }
+        }
+        
         @media (max-width: 1024px) {
           .collection-grid { grid-template-columns: repeat(2, 1fr); }
         }
