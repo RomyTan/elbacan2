@@ -26,7 +26,7 @@ export default function ElBacanApp() {
     { name: 'TORPEDO', ring: '52', length: '6 ½"', time: '40min', intensity: 4, wrapper: 'Habano', image: '/images/eb-std-torpedo.jpg', badge: null },
     { name: 'TORO', ring: '52', length: '6"', time: '30-45min', intensity: 2, wrapper: 'Habano', image: '/images/eb-std-toro.jpg', badge: null },
     { name: 'ROBUSTO', ring: '50', length: '5"', time: '30-45min', intensity: 2, wrapper: 'Habano', image: '/images/eb-std-robusto.jpg', badge: null },
-    { name: 'FUMAS', ring: '44', length: '6 ⅕"', time: '30-45min', intensity: 2, wrapper: 'Habano', image: '/images/eb-std-fumas.jpg', badge: null },
+    { name: 'FUMAS', ring: '44', length: '6⅕"', time: '30-45min', intensity: 2, wrapper: 'Habano', image: '/images/eb-std-fumas.jpg', badge: null },
     { name: 'ELEGANTES', ring: '50', length: '7"', time: '40-45min', intensity: 2, wrapper: 'Connecticut', image: '/images/ebpe-elegantes_connecticut.jpg', badge: 'BEST SELLER' },
     { name: 'ELEGANTES', ring: '50', length: '7"', time: '40-45min', intensity: 3, wrapper: 'Habano', image: '/images/ebpe-elegantes_habano.jpg', badge: null },
     { name: 'ELEGANTES', ring: '50', length: '7"', time: '40-45min', intensity: 4, wrapper: 'Maduro', image: '/images/ebpe-elegantes_maduro.jpg', badge: null },
@@ -42,6 +42,7 @@ export default function ElBacanApp() {
     { name: 'UNICOS', ring: '60', length: '6"', time: '45-55min', intensity: 2, wrapper: 'Connecticut', image: '/images/ebpe-unicos_connecticut.jpg', badge: null },
     { name: 'UNICOS', ring: '60', length: '6"', time: '45-55min', intensity: 3, wrapper: 'Habano', image: '/images/ebpe-unicos_habano.jpg', badge: null },
     { name: 'UNICOS', ring: '60', length: '6"', time: '45-55min', intensity: 4, wrapper: 'Maduro', image: '/images/ebpe-unicos_maduro.jpg', badge: 'BEST SELLER' },
+    { name: 'FUMITAS', ring: '32', length: '4¾"', time: '45-55min', intensity: 4, wrapper: 'Connecticut', image: '/images/mini-fumitas.jpg', badge: 'BEST SELLER' },
   ];
 
   const wrapperData = [
@@ -123,6 +124,7 @@ export default function ElBacanApp() {
   const filteredCollection = collectionData.filter((cigar) => {
     if (activeTab === 'ORIGINAL') return cigar.image.includes('eb-std');
     if (activeTab === 'PREMIUM EDITION') return cigar.image.includes('ebpe');
+    if (activeTab === 'MINI') return cigar.image.includes('mini');
     if (activeTab === 'BEST SELLER') return cigar.badge === 'BEST SELLER';
     return true;
   });
@@ -189,7 +191,7 @@ export default function ElBacanApp() {
         .home-container { position: relative; display: flex; flex-direction: column; background-color: #000000; animation: pageFadeIn 0.5s forwards; }
         .hero-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100dvh; background-image: url('${bgImagePath}'); background-size: cover; background-position: center top; z-index: 0; opacity: 0; animation: bgFadeIn 1.5s ease-out 0.2s forwards; }
         
-        .hero-gradient { position: absolute; top: 0; left: 0; width: 100%; height: 100dvh; background: linear-gradient( to bottom, rgba(0, 0, 0, 0.9) 0%, transparent 25%, transparent 65%, #000000 100% ); z-index: 2; pointer-events: none; }
+        .hero-gradient { position: absolute; top: 0; left: 0; width: 100%; height: 100dvh; background: linear-gradient( to bottom, rgba(0, 0, 0, 0.9) 0%, transparent 55%, transparent 65%, #000000 100% ); z-index: 2; pointer-events: none; }
         
         .content-layer { position: relative; z-index: 10; display: flex; flex-direction: column; min-height: 100dvh; transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.5s ease; }
         .content-layer.shifted { transform: translateX(-60%); opacity: 0; }
@@ -635,7 +637,7 @@ export default function ElBacanApp() {
               </p>
 
               <div className="collection-tabs">
-                {['ORIGINAL', 'PREMIUM EDITION', 'BEST SELLER'].map((tab) => (
+                {['ORIGINAL', 'PREMIUM EDITION', 'MINI', 'BEST SELLER'].map((tab) => (
                   <button 
                     key={tab} 
                     className={`tab-btn ${activeTab === tab ? 'active' : ''}`}
