@@ -387,9 +387,9 @@ export default function ElBacanApp() {
 
         /* PRODUCT MODAL */
         .modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.85); z-index: 9999; display: flex; justify-content: center; align-items: center; padding: 1.5rem; box-sizing: border-box; opacity: 0; animation: pageFadeIn 0.3s forwards; }
-        .modal-content { background: #ffffff; border-radius: 8px; padding: 3rem 1.5rem 2rem; width: 100%; max-width: 400px; display: flex; flex-direction: column; align-items: center; position: relative; border: 1px solid #f0e9df; }
+        .modal-content { background: #ffffff; border-radius: 8px; padding: 3rem 2rem 2rem; width: 90%; max-width: 800px; display: flex; flex-direction: column; align-items: center; position: relative; border: 1px solid #f0e9df; }
         .modal-close { position: absolute; top: 10px; right: 15px; background: none; border: none; font-size: 28px; color: #1c1c1c; cursor: pointer; }
-        .modal-img-box { width: 100%; height: 300px; display: flex; justify-content: center; align-items: center; margin-bottom: 1.5rem; }
+        .modal-img-box { width: 100%; height: 65vh; min-height: 350px; display: flex; justify-content: center; align-items: center; margin-bottom: 2rem; }
         .modal-img { max-width: 100%; max-height: 100%; object-fit: contain; }
 
         @media (max-width: 1024px) {
